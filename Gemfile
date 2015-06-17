@@ -25,6 +25,10 @@ gem "simple_form"
 gem "title"
 gem "uglifier"
 gem "unicorn"
+gem "clearance"
+
+# gem "blogit", github: "katanacode/blogit", branch: "rails4-tmp"
+# gem 'acts-as-taggable-on', '~> 3.4'
 
 group :development do
   gem "spring"
