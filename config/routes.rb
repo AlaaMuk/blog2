@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :passwords, controller: 'clearance/passwords', only: [:create, :new]
-  resource :session, controller: 'clearance/sessions', only: [:create]
+  resource :session, controller: 'clearance/sessions', only: [:create, :new]
 
   resources :users, controller: 'clearance/users', only: [:create] do
     resource :password,
@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   get '/sign_up' => 'clearance/users#new', as: 'sign_up'
 
   resources :articles
+
+  mount Blogit::Engine => "/blog"
 end
